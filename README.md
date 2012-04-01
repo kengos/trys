@@ -31,6 +31,12 @@ Block
 3.trys(:to_s) {|o| o.foo * o.baz}    # => nil
 ```
 
+Alias
+
+```ruby
+3.try_chain(:to_s, :foo) # => nil
+```
+
 ## Contributing
 
 1. Fork it

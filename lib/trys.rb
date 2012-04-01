@@ -14,6 +14,7 @@ module Trys
       self.try(a[0])
     end
   end
+  alias_method :try_chain, :trys
 end
 
 class Object

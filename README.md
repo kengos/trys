@@ -18,7 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+3.trys(:to_s, :foo)        # => nil
+3.trys(:to_s, :to_i)       # => nil
+3.trys(:to_s, :to_i, :foo) # => nil
+```
+
+Block 
+
+```ruby
+3.trys(:to_s) {|o| o.to_i * o.to_i } # => 9
+3.trys(:to_s) {|o| o.foo * o.baz}    # => nil
+```
 
 ## Contributing
 

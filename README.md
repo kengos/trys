@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ```ruby
 3.trys(:to_s, :foo)        # => nil
-3.trys(:to_s, :to_i)       # => nil
+3.trys(:to_s, :to_i)       # => 9
 3.trys(:to_s, :to_i, :foo) # => nil
 ```
 

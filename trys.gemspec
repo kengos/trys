@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["bakt.ken.240325@gmail.com"]
   gem.description   = %q{try(:foo).try(:bar) to trys(:foo, :bar)}
   gem.summary       = %q{try(:foo).try(:bar) to trys(:foo, :bar) not tries}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/kengos/trys"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")

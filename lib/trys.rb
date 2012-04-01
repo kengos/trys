@@ -5,8 +5,14 @@ unless Object.method_defined?(:try)
 end
 
 module Trys
-  def trys(*a)
-    a.size > 1 ? eval("self.try(a[0]).trys(#{a[1..-1].inspect[1..-2]})") : self.try(a[0])
+  def trys(*a, &b)
+    if a.size > 1
+      eval("self.try(a[0]).trys(#{a[1..-1].inspect[1..-2]}, &b)")
+    elsif block_given?
+      self.try(a[0]).try(&b)
+    else
+      self.try(a[0])
+    end
   end
 end
 
